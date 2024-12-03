@@ -1,0 +1,65 @@
+:root {
+    --font-principal: 'Lora', serif;
+    --font-titulo: 'Dancing Script', cursive;
+    --cor-destaque: #ff6f61;
+}
+
+body {
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: var(--font-titulo);
+    color: var(--cor-destaque);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+p {
+    font-size: 20px;
+    font-family: var(--font-principal);
+    line-height: 1.6;
+    color: #fff;
+}
+
+.boasVindas, .AFoto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.primeiraFoto, .fotoPraia {
+    width: 90%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease;
+}
+
+.primeiraFoto:hover, .fotoPraia:hover {
+    transform: scale(1.05);
+}
+
+.titulo {
+    animation: aparecer 2s ease-in-out;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
